@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <link rel="stylesheet" href="landing_page/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="landing_page/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="landing_page/css/owl.theme.default.css">
+    <link rel="stylesheet" href="landing_page/lightcase-2.5.0/src/css/lightcase.css">
+    <link rel="stylesheet" href="landing_page/css/style.css" type="text/css">
+    <link rel="stylesheet" href="landing_page/css/adv-details.css" type="text/css">
+    <title>Almosafer</title>
+    <link rel="shortcut icon" href="landing_page/image/website_logo.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+        integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@500&display=swap" rel="stylesheet">
+    <!--link rel="stylesheet" href="{{asset('dashboard_files/plugin/noty/noty.css')}}"-->
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!-------------------------------------Start NavbAR----------------------------------------->
+        <nav class="navbar navbar-expand-lg fixed-top scrolling-navbar top-nav-collapse navbar-light">
+            <div class="container-fluid">
+                <!--LOGO-->
+                <a class="navbar-brand logo" href="#home">
+                    <img src="landing_page/image/website_logo.png">
+                </a>
+                <!--Mobile button-->
+                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+                    data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!--nav-->
+                <div class="navbar-collapse collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav ">
+                        <a class="nav-item nav-link  active" href="#home">
+                            <i class="fas fa-home "></i>
+                            الرئيسية
+                        </a>
+                        <a class="nav-item nav-link" href="#services">
+                            <i class="fas fa-user-clock"></i>
+                            الخدمات
+                        </a>
+                        <a class="nav-item nav-link" href="#advertising">
+                            <i class="far fa-paper-plane"></i>
+                            الإعلانات
+                        </a>
+                        <a class="nav-item nav-link" href="#about-us">
+                            <i class="far fa-question-circle"></i>
+                            من نحن
+                        </a>
+                        <a class="nav-item nav-link " href="#contact_us">
+                            <i class="fas fa-phone"></i>
+                            تواصل معنا
+                        </a>
+
+
+                    </div>
+                    <a class="nav-link watsapp"
+                        href="https://api.whatsapp.com/send?phone={{ setting('whatsUp_link') }}">
+                        <!--i class="fab fa-whatsapp"></i-->
+                        <span class="_3cZ5X"><svg xmlns="http://www.w3.org/2000/svg" width="39" height="39"
+                                viewBox="0 0 39 39">
+                                <path fill="#00E676"
+                                    d="M10.7 32.8l.6.3c2.5 1.5 5.3 2.2 8.1 2.2 8.8 0 16-7.2 16-16 0-4.2-1.7-8.3-4.7-11.3s-7-4.7-11.3-4.7c-8.8 0-16 7.2-15.9 16.1 0 3 .9 5.9 2.4 8.4l.4.6-1.6 5.9 6-1.5z">
+                                </path>
+                                <path fill="#FFF"
+                                    d="M32.4 6.4C29 2.9 24.3 1 19.5 1 9.3 1 1.1 9.3 1.2 19.4c0 3.2.9 6.3 2.4 9.1L1 38l9.7-2.5c2.7 1.5 5.7 2.2 8.7 2.2 10.1 0 18.3-8.3 18.3-18.4 0-4.9-1.9-9.5-5.3-12.9zM19.5 34.6c-2.7 0-5.4-.7-7.7-2.1l-.6-.3-5.8 1.5L6.9 28l-.4-.6c-4.4-7.1-2.3-16.5 4.9-20.9s16.5-2.3 20.9 4.9 2.3 16.5-4.9 20.9c-2.3 1.5-5.1 2.3-7.9 2.3zm8.8-11.1l-1.1-.5s-1.6-.7-2.6-1.2c-.1 0-.2-.1-.3-.1-.3 0-.5.1-.7.2 0 0-.1.1-1.5 1.7-.1.2-.3.3-.5.3h-.1c-.1 0-.3-.1-.4-.2l-.5-.2c-1.1-.5-2.1-1.1-2.9-1.9-.2-.2-.5-.4-.7-.6-.7-.7-1.4-1.5-1.9-2.4l-.1-.2c-.1-.1-.1-.2-.2-.4 0-.2 0-.4.1-.5 0 0 .4-.5.7-.8.2-.2.3-.5.5-.7.2-.3.3-.7.2-1-.1-.5-1.3-3.2-1.6-3.8-.2-.3-.4-.4-.7-.5h-1.1c-.2 0-.4.1-.6.1l-.1.1c-.2.1-.4.3-.6.4-.2.2-.3.4-.5.6-.7.9-1.1 2-1.1 3.1 0 .8.2 1.6.5 2.3l.1.3c.9 1.9 2.1 3.6 3.7 5.1l.4.4c.3.3.6.5.8.8 2.1 1.8 4.5 3.1 7.2 3.8.3.1.7.1 1 .2h1c.5 0 1.1-.2 1.5-.4.3-.2.5-.2.7-.4l.2-.2c.2-.2.4-.3.6-.5s.4-.4.5-.6c.2-.4.3-.9.4-1.4v-.7s-.1-.1-.3-.2z">
+                                </path>
+                            </svg>
+                        </span>
+
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <!--------------------------------------End Navbar------------------------------------------------>
+        <div class="content-page">
+
+            <div class="container">
+                <!--Slider Start-->
+                <div class="main_section">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                            <!--li data-target="#carouselExampleIndicators" data-slide-to="3"></li-->
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="https://c.top4top.io/p_1920cer281.png" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://c.top4top.io/p_1920cer281.png" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://c.top4top.io/p_1920cer281.png" class="d-block w-100" alt="...">
+                            </div>
+                            <!----video item---->
+                            <!--div class="carousel-item">
+                                <video width="100%" height="outo" autoplay muted>
+                                    <source src="https://www.youtube.com/watch?v=zi9kBeG0ohc&ab_channel=AlmosaferTR"
+                                        type="video/mp4">
+                                    <source
+                                        src="https://www.youtube.com/watch?v=zi9kBeG0ohc&ab_channel=AlmosaferTRg"
+                                        type="video/ogg">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div-->
+                            <!-------->
+                        </div>
+
+                    </div>
+                </div>
+                <!--Slider End-->
+                <!--Pargraph Detailes Start-->
+                <div class="adv-deteails">
+                    <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى،
+                        حيث
+                        يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها
+                        التطبيق. إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات كما
+                        تريد، النص لن يبدو مقسما ولا يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي المواقع على وجه
+                        الخصوص، حيث يحتاج العميل فى كثير من الأحيان أن يطلع على صورة حقيقية لتصميم الموقع. ومن هنا وجب
+                        على المصمم أن يضع نصوصا مؤقتة على التصميم ليظهر للعميل الشكل كاملاً،دور مولد النص العربى أن يوفر
+                        على المصمم عناء البحث عن نص بديل لا علاقة له بالموضوع الذى يتحدث عنه التصميم فيظهر بشكل لا يليق.
+                        هذا النص يمكن أن يتم تركيبه على أي تصميم دون مشكلة فلن يبدو وكأنه نص منسوخ، غير منظم، غير منسق،
+                        أو حتى غير مفهوم. لأنه مازال نصاً بديلاً ومؤقتاً. هذا النص هو مثال لنص يمكن أن يستبدل في نفس
+                        المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من
+                        النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق. إذا كنت تحتاج إلى عدد أكبر من
+                        الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات كما تريد، النص لن يبدو مقسما ولا يحوي أخطاء
+                        لغوية، مولد النص العربى مفيد لمصممي المواقع على وجه الخصوص، حيث يحتاج العميل فى كثير من الأحيان
+                        أن يطلع على صورة حقيقية لتصميم الموقع. ومن هنا وجب على المصمم أن يضع نصوصا مؤقتة على التصميم
+                        ليظهر للعميل الشكل كاملاً،دور مولد النص العربى أن يوفر على المصمم عناء البحث عن نص بديل لا علاقة
+                        له بالموضوع الذى يتحدث عنه التصميم فيظهر بشكل لا يليق. هذا النص يمكن أن يتم تركيبه على أي تصميم
+                        دون مشكلة فلن يبدو وكأنه نص منسوخ، غير منظم، غير منسق، أو حتى غير مفهوم. لأنه مازال نصاً بديلاً
+                        ومؤقتاً.</p>
+                </div>
+                <!--Pargraph Detailes End-->
+                <!--watsapp contact---->
+                <div class="section watsapp-bar" id="watsapp-bar">
+                    <div class="watsapp-content align-items-center">
+                        <div class="row">
+                            <div class="col-sm-12 col-lg-8">
+                                <div class="wats-icon">
+                                    <img src="landing_page/image/logo-whatsapp.svg" alt="wats icon">
+                                </div>
+                                <div class="wats-txt">
+                                    <h3>احصل الآن على استشارة مجانية</h3>
+                                    <p>تواصل معنا عبر الواتس اب مباشرة واحصل على المزيد من المعلومات.</p>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="col-sm-12 col-lg-4">
+                                <a class="wats-num" href="#">
+                                    <span class="number_whats">905#########</span>
+                                    <span class="whats_icon"><i class="fab fa-whatsapp"></i></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--watsapp contact end-->
+            </div>
+        </div>
+
+        <!---------------------------------------Countact US Start-------------------------------------->
+        <div class="contact_us" id="contact_us">
+            <div class="contact-information">
+
+                <div class="contact-info">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6 col-lg-4">
+                            <span class="icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </span>
+                            <h4>العنـوان</h4>
+                            <p>121 Rock Sreet, 21 Avenue,
+                                New York, NY 92103-9000</p>
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-4">
+                            <span class="icon">
+                                <i class="fas fa-envelope"></i>
+                            </span>
+                            <h4>البـريد الالكتروني</h4>
+                            <p>
+                                <a href="#" class="email">
+                                    hello@company.com
+                                </a>
+                            </p>
+                            <p>
+                                <a href="#" class="email">
+                                    support@company.com.com
+                                </a>
+                            </p>
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-4">
+                            <span class="icon">
+                                <i class="fas fa-phone"></i>
+                            </span>
+                            <h4>اتصــل بنـا</h4>
+                            <p>1 (234) 567-891</p>
+                            <p>1 (234) 987-654</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="footer">
+                <div class="container">
+                    <ul class="social-media">
+                        <li class="social-item">
+                            <a href="https://api.whatsapp.com/send?phone={{ setting('whatsUp_link') }}" id="watsapp">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </li>
+                        <li class="social-item">
+                            <a target="_blank" href="{{ setting('instagram_link') }}" id="instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li class="social-item">
+                            <a target="_blank" href="{{ setting('facebook_link') }}" id="facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li class="social-item">
+                            <a target="_blank" href="{{ setting('snapChat_link') }}" id="snap">
+                                <i class="fab fa-snapchat-ghost"></i>
+                            </a>
+                        </li>
+                        <li class="social-item">
+                            <a target="_blank" href="{{ setting('youtubeChanel') }}" id="youtube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <!---------------------------------------Countact US END---------------------------------------->
+
+        <!-----------------------------------------Footer Start------------------------------------------->
+       
+
+        <!-----------------------------------------Footer End------------------------------------------->
+
+    </div>
+
+
+    <script src="landing_page/js/jquery3.3.1.js"></script>
+    <script src="landing_page/js/popper.min.js"></script>
+    <script src="landing_page/js/bootstrap.min.js"></script>
+    <script src="landing_page/js/owl.carousel.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+</body>
+
+</html>
